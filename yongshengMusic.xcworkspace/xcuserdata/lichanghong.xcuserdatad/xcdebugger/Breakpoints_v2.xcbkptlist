@@ -41,24 +41,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "yongshengMusic/main/view/CHToolsTableViewCell.m"
-            timestampString = "557588137.34509"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "-setItemList:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "yongshengMusic/main/ViewController.m"
-            timestampString = "557588137.3452539"
+            timestampString = "557588954.86638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
@@ -73,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "yongshengMusic/main/ViewController.m"
-            timestampString = "557588137.345409"
+            filePath = "yongshengMusic/network/CHNetRequest.m"
+            timestampString = "557588954.866781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "+requestSuccess:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -30,7 +30,7 @@
                                 @"CHBannerTableViewCell",
                                 @"CHToolsTableViewCell"
                                 ];
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -79,7 +79,7 @@
             height = self.homePageModel.banners.count>0?180:0;
             break;
         case CHViewControllerCellTypeSectionTools:
-            height = self.homePageModel.iconList.count>0?130:0;
+            height = self.homePageModel.iconList.count>0?110:0;
             break;
         default:
             break;

@@ -12,6 +12,7 @@
 #import <CHBaseUtil/UIView+CHFrame.h>
 #import <CHBaseUtil_Safe.h>
 #import <UIImageView+WebCache.h>
+#import "HomePageModel.h"
 
 #define SY_CHANGEWIDTH(sy_width) sy_width * KScreenWidth / 375
 #define kTopMargin SY_CHANGEWIDTH(5)
@@ -53,6 +54,7 @@
     }];
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.bottom.equalTo(self);
+        make.top.mas_equalTo(kItemWidth+7);
     }];
 }
 
@@ -135,13 +137,12 @@
 {
     _itemList = itemList;
     for (NSInteger i = 0; i < 10; i++) {
-        id item = [itemList safeObjectAtIndex:i];
+        HomeBannerItem* item = [itemList safeObjectAtIndex:i];
         CHToolItemView * itemView = [self viewWithTag:100 + i];
         if (item) {
             itemView.hidden = NO;
-            NSString *url = @"http://img2.soyoung.com/user/20171025/5/20171025164759482_100_100.jpg";
-            [itemView.iconView sd_setImageWithURL:[NSURL URLWithString:url]];
-            itemView.nameLabel.text = @"txt";// item.name;
+            [itemView.iconView sd_setImageWithURL:[NSURL URLWithString:item.img]];
+            itemView.nameLabel.text = item.title;
         } else {
             itemView.hidden = YES;
         }
