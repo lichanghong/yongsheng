@@ -26,8 +26,8 @@
 @interface HomeStudentWorkEntity:NSObject
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *img;
-@property (nonatomic,strong) NSString *url;user_selfie
-@property (nonatomic,strong) NSString *user_selfie
+@property (nonatomic,strong) NSString *url;
+@property (nonatomic,strong) NSString *user_selfie;
 @property (nonatomic,strong) NSString *nick_name;
 
 @end

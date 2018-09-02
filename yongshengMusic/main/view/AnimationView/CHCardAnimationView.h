@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomePageModel.h"
 
 
 @interface CHCardAnimationView : UIView
+
+@property (nonatomic, copy) NSMutableArray<HomeStudentWorkEntity *> *cardViewEntityList;
+
 @property (nonatomic, assign) NSInteger showOverlayCount;
 
 - (void)show;
+
 @end

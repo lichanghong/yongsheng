@@ -11,6 +11,8 @@
 #import <UIColor+Util.h>
 #import "CHCardAnimationContentView.h"
 #import "UIView+Shadow.h"
+#import <CHBaseUtil_Safe.h>
+#import <UIImageView+AFNetworking.h>
 
 #define xxxScreenW (UIScreen.mainScreen.bounds.size.width)
 #define xxxScreenH (UIScreen.mainScreen.bounds.size.height)
@@ -20,6 +22,7 @@
 @property (nonatomic,strong)NSMutableArray *cardViewArr;
 @property (nonatomic, assign) NSInteger bottomShowCardIndex;
 @property (nonatomic, assign) CGPoint cardInwindowCenter;
+@property (nonatomic, assign) NSInteger currentShowIndex;
 
 @end
 
@@ -43,6 +46,54 @@
         [self.cardViewArr addObject:view];
     }
 }
+
+- (void)setCardViewEntityList:(NSMutableArray<HomeStudentWorkEntity *> *)cardViewEntityList
+{
+    if (!_cardViewEntityList || _cardViewEntityList.count<=0) {
+        _cardViewEntityList = cardViewEntityList;
+        [self reloadData];
+    }
+}
+
+- (void)reloadData
+{
+    if (self.currentShowIndex == _cardViewEntityList.count) {
+        self.currentShowIndex = 0;
+    }
+    if (self.currentShowIndex+2 > _cardViewEntityList.count-1) {
+        //数组到底了，准备从头开始循环
+        NSInteger roundRange = self.currentShowIndex+2 - _cardViewEntityList.count + 1;
+        NSArray *subArr = [_cardViewEntityList safeSubarrayWithRange:NSMakeRange(self.currentShowIndex, self.showOverlayCount-roundRange)];
+        NSArray *head = [_cardViewEntityList safeSubarrayWithRange:NSMakeRange(0, roundRange)];
+        NSArray *unionArr = [subArr arrayByAddingObjectsFromArray:head];
+        NSArray *reverseArr = [[unionArr reverseObjectEnumerator] allObjects];;
+        
+        [self refreshDataWithReverseArr:reverseArr];
+    }
+    else
+    {
+        NSArray *subArr = [_cardViewEntityList safeSubarrayWithRange:NSMakeRange(self.currentShowIndex, 3)];
+        NSArray *reverseArr = [[subArr reverseObjectEnumerator] allObjects];;
+        [self refreshDataWithReverseArr:reverseArr];
+    }
+    _currentShowIndex+=1;
+    
+}
+
+
+- (void)refreshDataWithReverseArr:(NSArray *)reverseArr
+{
+    for (int i=0; i<self.cardViewArr.count; i++) {
+        CHCardAnimationContentView *cardView = [self.cardViewArr safeObjectAtIndex:i];
+        HomeStudentWorkEntity *entity = [reverseArr safeObjectAtIndex:i];
+        cardView.titleLabel.text = entity.title;
+        cardView.nickName.text = entity.nick_name;
+        NSURL *avatar = [NSURL URLWithString:entity.user_selfie];
+        [cardView.portraitImageView setImageWithURL:avatar placeholderImage:nil];
+        [cardView.leftImageView setImageWithURL:[NSURL URLWithString:entity.img] placeholderImage:nil];
+    }
+}
+
 
 - (UIView *)createSubCardViewAtIndex:(NSInteger)index
 {

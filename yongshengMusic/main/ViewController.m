@@ -115,6 +115,13 @@
         case CHViewControllerCellTypeSectionTools:{
             CHToolsTableViewCell *tools = (CHToolsTableViewCell *)cell;
             tools.itemList = self.homePageModel.iconList;
+            break;
+        }
+        case CHViewControllerCellTypeSectionWorks:{
+            CHCardAnimationTableViewCell *workCell = (CHCardAnimationTableViewCell *)cell;
+            workCell.titleLabel.text = @"学生作品";
+            workCell.cardAnimationView.cardViewEntityList = [self.homePageModel.studentWork mutableCopy];
+            break;
         }
         default:
             break;
