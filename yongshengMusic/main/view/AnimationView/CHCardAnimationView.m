@@ -49,7 +49,7 @@
 
 - (void)setCardViewEntityList:(NSMutableArray<HomeStudentWorkEntity *> *)cardViewEntityList
 {
-    if (!_cardViewEntityList || _cardViewEntityList.count<=0) {
+    if ((!_cardViewEntityList || _cardViewEntityList.count<=0) && cardViewEntityList) {
         _cardViewEntityList = cardViewEntityList;
         [self reloadData];
     }
@@ -109,20 +109,6 @@
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGes:)];
     [cardView addGestureRecognizer:pan];
     [self addSubview:cardView];
-    
-    //        [self addGesture:cardView];
-    
-    //        if ([_delegate respondsToSelector:@selector(customCardView:index:cardStore:)] && self.customCardView) {
-    //            [_delegate customCardView:cardView index:i cardStore:self];
-    //        }else{
-    //            UIImageView *imageV = [UIImageView new];
-    //            [cardView addSubview:imageV];
-    //            imageV.frame = CGRectMake(0, 0, self.width_xxx, self.cardHeight);
-    //            [imageV sd_setImageWithURL:[NSURL URLWithString:self.imgUrlStrArr[i]] placeholderImage:self.placeholderImage];
-    //            imageV.contentMode = self.imgContentMode;
-    //            imageV.tag = IMGV_Tag;
-    //        }
-//    [self animationView:cardView scale:1.0-offset*(count-index) duration:0.1];
     return cardView;
 }
 
@@ -134,6 +120,7 @@
         UIView *addview = [self createSubCardViewAtIndex:0];
         [self sendSubviewToBack:addview];
         [self.cardViewArr insertObject:addview atIndex:0];
+        [self reloadData];
 
         CGFloat cardOffset = 6;
         CGFloat cardHeight = self.height - (self.showOverlayCount-1)*cardOffset;
