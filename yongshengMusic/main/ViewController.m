@@ -9,10 +9,12 @@
 #import "ViewController.h"
 #import "CHBannerTableViewCell.h"
 #import "CHToolsTableViewCell.h"
+#import "CHCardAnimationTableViewCell.h"
 #import "UITableView+CHExtension.h"
 #import "CHNetRequest.h"
 #import "HomePageModel.h"
 #import <YYModel.h>
+
 #define WEAKSELF __weak typeof(self) weakSelf = self;
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -28,7 +30,8 @@
     [super viewDidLoad];
     self.tableViewCellNames = @[
                                 @"CHBannerTableViewCell",
-                                @"CHToolsTableViewCell"
+                                @"CHToolsTableViewCell",
+                                @"CHCardAnimationTableViewCell"
                                 ];
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:self.tableView];
@@ -65,6 +68,9 @@
         case CHViewControllerCellTypeSectionTools:
             return self.homePageModel.iconList.count>0? 1:0;
             break;
+        case CHViewControllerCellTypeSectionWorks:
+            return  1;
+            break;
         default:
             break;
     }
@@ -80,6 +86,9 @@
             break;
         case CHViewControllerCellTypeSectionTools:
             height = self.homePageModel.iconList.count>0?110:0;
+            break;
+        case CHViewControllerCellTypeSectionWorks:
+            height = 180;
             break;
         default:
             break;

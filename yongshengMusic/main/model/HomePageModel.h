@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class HomeBannerItem;
+@class HomeBannerItem,HomeStudentWorkEntity;
 @interface HomePageModel : NSObject
 @property (nonatomic,strong) NSArray <HomeBannerItem *>*banners;
 @property (nonatomic,strong) NSArray <HomeBannerItem *>*iconList;
+@property (nonatomic,strong) NSArray <HomeStudentWorkEntity *>*studentWork;
 
 @end
 
@@ -19,5 +20,14 @@
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *img;
 @property (nonatomic,strong) NSString *url;
+
+@end
+
+@interface HomeStudentWorkEntity:NSObject
+@property (nonatomic,strong) NSString *title;
+@property (nonatomic,strong) NSString *img;
+@property (nonatomic,strong) NSString *url;user_selfie
+@property (nonatomic,strong) NSString *user_selfie
+@property (nonatomic,strong) NSString *nick_name;
 
 @end

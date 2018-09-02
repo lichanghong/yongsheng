@@ -11,12 +11,14 @@
 @implementation HomePageModel
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"banners" : [HomeBannerItem class],
-             @"iconList" : [HomeBannerItem class]
+             @"iconList" : [HomeBannerItem class],
+             @"studentWork":[HomeStudentWorkEntity class]
              };
 }
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"banners"  : @"banner",
              @"iconList"  : @"icon_list",
+             @"studentWork": @"student_work"
              };
 }
 
@@ -24,3 +26,7 @@
 @implementation HomeBannerItem
 
 @end
+@implementation HomeStudentWorkEntity
+
+@end
+

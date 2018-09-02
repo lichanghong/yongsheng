@@ -19,6 +19,10 @@
 		95A50A67212153D100E26896 /* UITableView+CHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A50A66212153D100E26896 /* UITableView+CHExtension.m */; };
 		95B62F2A213BB0BB00BA879F /* CHNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F29213BB0BB00BA879F /* CHNetRequest.m */; };
 		95B62F2D213BBE3100BA879F /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F2C213BBE3100BA879F /* HomePageModel.m */; };
+		95B62F35213C262200BA879F /* CHCardAnimationContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F32213C262200BA879F /* CHCardAnimationContentView.m */; };
+		95B62F36213C262200BA879F /* CHCardAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F33213C262200BA879F /* CHCardAnimationView.m */; };
+		95B62F37213C262200BA879F /* CHCardAnimationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F34213C262200BA879F /* CHCardAnimationTableViewCell.m */; };
+		95B62F3A213C274100BA879F /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F39213C274100BA879F /* UIView+Shadow.m */; };
 		EA5502E9B958E128457DB717 /* libPods-yongshengMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC84B19C8DB5EC1530A660D /* libPods-yongshengMusic.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +52,14 @@
 		95B62F29213BB0BB00BA879F /* CHNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHNetRequest.m; sourceTree = "<group>"; };
 		95B62F2B213BBE3100BA879F /* HomePageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageModel.h; sourceTree = "<group>"; };
 		95B62F2C213BBE3100BA879F /* HomePageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageModel.m; sourceTree = "<group>"; };
+		95B62F2F213C262200BA879F /* CHCardAnimationContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCardAnimationContentView.h; sourceTree = "<group>"; };
+		95B62F30213C262200BA879F /* CHCardAnimationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCardAnimationTableViewCell.h; sourceTree = "<group>"; };
+		95B62F31213C262200BA879F /* CHCardAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCardAnimationView.h; sourceTree = "<group>"; };
+		95B62F32213C262200BA879F /* CHCardAnimationContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCardAnimationContentView.m; sourceTree = "<group>"; };
+		95B62F33213C262200BA879F /* CHCardAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCardAnimationView.m; sourceTree = "<group>"; };
+		95B62F34213C262200BA879F /* CHCardAnimationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCardAnimationTableViewCell.m; sourceTree = "<group>"; };
+		95B62F38213C274100BA879F /* UIView+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shadow.h"; sourceTree = "<group>"; };
+		95B62F39213C274100BA879F /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shadow.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +139,7 @@
 		951424D421206D2200A420E7 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				95B62F2E213C262200BA879F /* AnimationView */,
 				951424D52120759800A420E7 /* CHBaseTableViewCell.h */,
 				951424D62120759800A420E7 /* CHBaseTableViewCell.m */,
 				951424D221206C1A00A420E7 /* CHToolsTableViewCell.h */,
@@ -155,6 +168,21 @@
 				95B62F29213BB0BB00BA879F /* CHNetRequest.m */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		95B62F2E213C262200BA879F /* AnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				95B62F38213C274100BA879F /* UIView+Shadow.h */,
+				95B62F39213C274100BA879F /* UIView+Shadow.m */,
+				95B62F31213C262200BA879F /* CHCardAnimationView.h */,
+				95B62F33213C262200BA879F /* CHCardAnimationView.m */,
+				95B62F2F213C262200BA879F /* CHCardAnimationContentView.h */,
+				95B62F32213C262200BA879F /* CHCardAnimationContentView.m */,
+				95B62F30213C262200BA879F /* CHCardAnimationTableViewCell.h */,
+				95B62F34213C262200BA879F /* CHCardAnimationTableViewCell.m */,
+			);
+			path = AnimationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,12 +305,16 @@
 				951424DA2120763600A420E7 /* CHBannerTableViewCell.m in Sources */,
 				951424BE2120646900A420E7 /* ViewController.m in Sources */,
 				95A50A67212153D100E26896 /* UITableView+CHExtension.m in Sources */,
+				95B62F36213C262200BA879F /* CHCardAnimationView.m in Sources */,
 				951424D72120759800A420E7 /* CHBaseTableViewCell.m in Sources */,
 				95B62F2D213BBE3100BA879F /* HomePageModel.m in Sources */,
 				95B62F2A213BB0BB00BA879F /* CHNetRequest.m in Sources */,
 				951424C92120646A00A420E7 /* main.m in Sources */,
 				951424D321206C1A00A420E7 /* CHToolsTableViewCell.m in Sources */,
+				95B62F3A213C274100BA879F /* UIView+Shadow.m in Sources */,
 				951424BB2120646900A420E7 /* AppDelegate.m in Sources */,
+				95B62F37213C262200BA879F /* CHCardAnimationTableViewCell.m in Sources */,
+				95B62F35213C262200BA879F /* CHCardAnimationContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
