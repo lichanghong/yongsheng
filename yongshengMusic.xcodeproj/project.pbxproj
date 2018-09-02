@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		951424BB2120646900A420E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 951424BA2120646900A420E7 /* AppDelegate.m */; };
+		951424BE2120646900A420E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 951424BD2120646900A420E7 /* ViewController.m */; };
+		951424C12120646900A420E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951424BF2120646900A420E7 /* Main.storyboard */; };
+		951424C32120646A00A420E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951424C22120646A00A420E7 /* Assets.xcassets */; };
+		951424C62120646A00A420E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951424C42120646A00A420E7 /* LaunchScreen.storyboard */; };
+		951424C92120646A00A420E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 951424C82120646A00A420E7 /* main.m */; };
+		951424D321206C1A00A420E7 /* CHToolsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 951424D121206C1A00A420E7 /* CHToolsTableViewCell.m */; };
+		951424D72120759800A420E7 /* CHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 951424D62120759800A420E7 /* CHBaseTableViewCell.m */; };
+		951424DA2120763600A420E7 /* CHBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 951424D92120763600A420E7 /* CHBannerTableViewCell.m */; };
+		95A50A67212153D100E26896 /* UITableView+CHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A50A66212153D100E26896 /* UITableView+CHExtension.m */; };
+		95B62F2A213BB0BB00BA879F /* CHNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F29213BB0BB00BA879F /* CHNetRequest.m */; };
+		EA5502E9B958E128457DB717 /* libPods-yongshengMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC84B19C8DB5EC1530A660D /* libPods-yongshengMusic.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5801FAD4EDC0AAEEA24C12F5 /* Pods-yongshengMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yongshengMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-yongshengMusic/Pods-yongshengMusic.release.xcconfig"; sourceTree = "<group>"; };
+		67CFAE413F91EA99D4B7084B /* Pods-yongshengMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yongshengMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yongshengMusic/Pods-yongshengMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		7AC84B19C8DB5EC1530A660D /* libPods-yongshengMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-yongshengMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		951424B62120646900A420E7 /* yongshengMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yongshengMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		951424B92120646900A420E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		951424BA2120646900A420E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		951424BC2120646900A420E7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		951424BD2120646900A420E7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		951424C02120646900A420E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		951424C22120646A00A420E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		951424C52120646A00A420E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		951424C72120646A00A420E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		951424C82120646A00A420E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		951424D121206C1A00A420E7 /* CHToolsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHToolsTableViewCell.m; sourceTree = "<group>"; };
+		951424D221206C1A00A420E7 /* CHToolsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHToolsTableViewCell.h; sourceTree = "<group>"; };
+		951424D52120759800A420E7 /* CHBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHBaseTableViewCell.h; sourceTree = "<group>"; };
+		951424D62120759800A420E7 /* CHBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHBaseTableViewCell.m; sourceTree = "<group>"; };
+		951424D82120763600A420E7 /* CHBannerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHBannerTableViewCell.h; sourceTree = "<group>"; };
+		951424D92120763600A420E7 /* CHBannerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHBannerTableViewCell.m; sourceTree = "<group>"; };
+		95A50A65212153D100E26896 /* UITableView+CHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+CHExtension.h"; sourceTree = "<group>"; };
+		95A50A66212153D100E26896 /* UITableView+CHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CHExtension.m"; sourceTree = "<group>"; };
+		95B62F28213BB0BB00BA879F /* CHNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHNetRequest.h; sourceTree = "<group>"; };
+		95B62F29213BB0BB00BA879F /* CHNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHNetRequest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		951424B32120646900A420E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5502E9B958E128457DB717 /* libPods-yongshengMusic.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44E76E2EC7E489B8B6CB53F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AC84B19C8DB5EC1530A660D /* libPods-yongshengMusic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		584B93DC356C656E60AC2386 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67CFAE413F91EA99D4B7084B /* Pods-yongshengMusic.debug.xcconfig */,
+				5801FAD4EDC0AAEEA24C12F5 /* Pods-yongshengMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		951424AD2120646900A420E7 = {
+			isa = PBXGroup;
+			children = (
+				951424B82120646900A420E7 /* yongshengMusic */,
+				951424B72120646900A420E7 /* Products */,
+				584B93DC356C656E60AC2386 /* Pods */,
+				44E76E2EC7E489B8B6CB53F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		951424B72120646900A420E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				951424B62120646900A420E7 /* yongshengMusic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		951424B82120646900A420E7 /* yongshengMusic */ = {
+			isa = PBXGroup;
+			children = (
+				95B62F27213BB04E00BA879F /* network */,
+				951424CF2120648200A420E7 /* main */,
+			);
+			path = yongshengMusic;
+			sourceTree = "<group>";
+		};
+		951424CF2120648200A420E7 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				95B62F26213BB04200BA879F /* model */,
+				951424D421206D2200A420E7 /* view */,
+				951424B92120646900A420E7 /* AppDelegate.h */,
+				951424BA2120646900A420E7 /* AppDelegate.m */,
+				951424BC2120646900A420E7 /* ViewController.h */,
+				951424BD2120646900A420E7 /* ViewController.m */,
+				951424BF2120646900A420E7 /* Main.storyboard */,
+				951424C22120646A00A420E7 /* Assets.xcassets */,
+				951424C42120646A00A420E7 /* LaunchScreen.storyboard */,
+				951424C72120646A00A420E7 /* Info.plist */,
+				951424C82120646A00A420E7 /* main.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		951424D421206D2200A420E7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				951424D52120759800A420E7 /* CHBaseTableViewCell.h */,
+				951424D62120759800A420E7 /* CHBaseTableViewCell.m */,
+				951424D221206C1A00A420E7 /* CHToolsTableViewCell.h */,
+				951424D121206C1A00A420E7 /* CHToolsTableViewCell.m */,
+				951424D82120763600A420E7 /* CHBannerTableViewCell.h */,
+				951424D92120763600A420E7 /* CHBannerTableViewCell.m */,
+				95A50A65212153D100E26896 /* UITableView+CHExtension.h */,
+				95A50A66212153D100E26896 /* UITableView+CHExtension.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		95B62F26213BB04200BA879F /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		95B62F27213BB04E00BA879F /* network */ = {
+			isa = PBXGroup;
+			children = (
+				95B62F28213BB0BB00BA879F /* CHNetRequest.h */,
+				95B62F29213BB0BB00BA879F /* CHNetRequest.m */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		951424B52120646900A420E7 /* yongshengMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 951424CC2120646A00A420E7 /* Build configuration list for PBXNativeTarget "yongshengMusic" */;
+			buildPhases = (
+				1B77060BCD2B1DA51B058D3C /* [CP] Check Pods Manifest.lock */,
+				951424B22120646900A420E7 /* Sources */,
+				951424B32120646900A420E7 /* Frameworks */,
+				951424B42120646900A420E7 /* Resources */,
+				A43D18E69266A72029B8F7A5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yongshengMusic;
+			productName = yongshengMusic;
+			productReference = 951424B62120646900A420E7 /* yongshengMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		951424AE2120646900A420E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = lichanghong;
+				TargetAttributes = {
+					951424B52120646900A420E7 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = 951424B12120646900A420E7 /* Build configuration list for PBXProject "yongshengMusic" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 951424AD2120646900A420E7;
+			productRefGroup = 951424B72120646900A420E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				951424B52120646900A420E7 /* yongshengMusic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		951424B42120646900A420E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				951424C62120646A00A420E7 /* LaunchScreen.storyboard in Resources */,
+				951424C32120646A00A420E7 /* Assets.xcassets in Resources */,
+				951424C12120646900A420E7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B77060BCD2B1DA51B058D3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yongshengMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A43D18E69266A72029B8F7A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-yongshengMusic/Pods-yongshengMusic-resources.sh",
+				"${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal.png",
+				"${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal@2x.png",
+				"${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected.png",
+				"${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected@2x.png",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pagecontrol-thumb-normal.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pagecontrol-thumb-normal@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pagecontrol-thumb-selected.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pagecontrol-thumb-selected@2x.png",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yongshengMusic/Pods-yongshengMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		951424B22120646900A420E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				951424DA2120763600A420E7 /* CHBannerTableViewCell.m in Sources */,
+				951424BE2120646900A420E7 /* ViewController.m in Sources */,
+				95A50A67212153D100E26896 /* UITableView+CHExtension.m in Sources */,
+				951424D72120759800A420E7 /* CHBaseTableViewCell.m in Sources */,
+				95B62F2A213BB0BB00BA879F /* CHNetRequest.m in Sources */,
+				951424C92120646A00A420E7 /* main.m in Sources */,
+				951424D321206C1A00A420E7 /* CHToolsTableViewCell.m in Sources */,
+				951424BB2120646900A420E7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		951424BF2120646900A420E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				951424C02120646900A420E7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		951424C42120646A00A420E7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				951424C52120646A00A420E7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		951424CA2120646A00A420E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		951424CB2120646A00A420E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		951424CD2120646A00A420E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67CFAE413F91EA99D4B7084B /* Pods-yongshengMusic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86NC63YY5X;
+				INFOPLIST_FILE = "$(SRCROOT)/yongshengMusic/main/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongsheng.music;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		951424CE2120646A00A420E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5801FAD4EDC0AAEEA24C12F5 /* Pods-yongshengMusic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86NC63YY5X;
+				INFOPLIST_FILE = "$(SRCROOT)/yongshengMusic/main/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongsheng.music;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		951424B12120646900A420E7 /* Build configuration list for PBXProject "yongshengMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				951424CA2120646A00A420E7 /* Debug */,
+				951424CB2120646A00A420E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		951424CC2120646A00A420E7 /* Build configuration list for PBXNativeTarget "yongshengMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				951424CD2120646A00A420E7 /* Debug */,
+				951424CE2120646A00A420E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 951424AE2120646900A420E7 /* Project object */;
+}

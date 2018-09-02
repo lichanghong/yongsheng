@@ -1,0 +1,6 @@
+module Pods_yongshengMusic {
+  umbrella header "Pods-yongshengMusic-umbrella.h"
+
+  export *
+  module * { export * }
+}

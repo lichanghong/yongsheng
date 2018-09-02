@@ -1,0 +1,1 @@
+../../../CHBaseUtil/CHBaseUtil_Safe/Classes/NSString+Resolve.h
