@@ -60,11 +60,10 @@
 {
     switch (section) {
         case CHViewControllerCellTypeSectionBanner:
-            return 1;
+            return self.homePageModel.banners.count>0? 1:0;
             break;
         case CHViewControllerCellTypeSectionTools:
-            return 1;
-//            return self.categoryModel.live.list.count ? 1 : 0;
+            return self.homePageModel.iconList.count>0? 1:0;
             break;
         default:
             break;
@@ -77,10 +76,10 @@
     CGFloat height = 0;
     switch (indexPath.section) {
         case CHViewControllerCellTypeSectionBanner:
-            height = 180;
+            height = self.homePageModel.banners.count>0?180:0;
             break;
         case CHViewControllerCellTypeSectionTools:
-            height = 130;
+            height = self.homePageModel.iconList.count>0?130:0;
             break;
         default:
             break;
@@ -106,7 +105,7 @@
         }
         case CHViewControllerCellTypeSectionTools:{
             CHToolsTableViewCell *tools = (CHToolsTableViewCell *)cell;
-            tools.itemList = @[@"1",@"2"];
+            tools.itemList = self.homePageModel.iconList;
         }
         default:
             break;

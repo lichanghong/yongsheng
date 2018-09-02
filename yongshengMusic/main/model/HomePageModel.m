@@ -10,10 +10,14 @@
 
 @implementation HomePageModel
 + (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"banners" : [HomeBannerItem class] };
+    return @{@"banners" : [HomeBannerItem class],
+             @"iconList" : [HomeBannerItem class]
+             };
 }
 + (NSDictionary *)modelCustomPropertyMapper {
-    return @{@"banners"  : @"banner"};
+    return @{@"banners"  : @"banner",
+             @"iconList"  : @"icon_list",
+             };
 }
 
 @end

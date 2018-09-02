@@ -11,6 +11,7 @@
 @class HomeBannerItem;
 @interface HomePageModel : NSObject
 @property (nonatomic,strong) NSArray <HomeBannerItem *>*banners;
+@property (nonatomic,strong) NSArray <HomeBannerItem *>*iconList;
 
 @end
 
