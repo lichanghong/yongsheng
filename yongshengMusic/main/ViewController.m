@@ -10,10 +10,15 @@
 #import "CHBannerTableViewCell.h"
 #import "CHToolsTableViewCell.h"
 #import "UITableView+CHExtension.h"
+#import "CHNetRequest.h"
+#import "HomePageModel.h"
+#import <YYModel.h>
+#define WEAKSELF __weak typeof(self) weakSelf = self;
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,copy)NSArray *tableViewCellNames;
+@property (nonatomic,strong)HomePageModel *homePageModel;
 
 @end
 
@@ -34,7 +39,13 @@
         [self.tableView registerClass:cell];
     }
 
-
+    WEAKSELF
+    [CHNetRequest requestSuccess:^(id result) {
+       weakSelf.homePageModel = [HomePageModel yy_modelWithJSON:result];
+        [weakSelf.tableView reloadData];
+    } failure:^(NSError *error) {
+        
+    }];
     // Do any additional setup after loading the view, typically from a nib.
     
     
@@ -89,7 +100,7 @@
         case CHViewControllerCellTypeSectionBanner:
         {
             CHBannerTableViewCell *banner = (CHBannerTableViewCell *)cell;
-//            SYHomeBannerTableViewCell * bannerCell = (SYHomeBannerTableViewCell *)cell;
+            banner.banners = self.homePageModel.banners;
             //赋值
             break;
         }

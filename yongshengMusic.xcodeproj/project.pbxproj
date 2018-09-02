@@ -18,6 +18,7 @@
 		951424DA2120763600A420E7 /* CHBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 951424D92120763600A420E7 /* CHBannerTableViewCell.m */; };
 		95A50A67212153D100E26896 /* UITableView+CHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A50A66212153D100E26896 /* UITableView+CHExtension.m */; };
 		95B62F2A213BB0BB00BA879F /* CHNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F29213BB0BB00BA879F /* CHNetRequest.m */; };
+		95B62F2D213BBE3100BA879F /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F2C213BBE3100BA879F /* HomePageModel.m */; };
 		EA5502E9B958E128457DB717 /* libPods-yongshengMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC84B19C8DB5EC1530A660D /* libPods-yongshengMusic.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,8 @@
 		95A50A66212153D100E26896 /* UITableView+CHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CHExtension.m"; sourceTree = "<group>"; };
 		95B62F28213BB0BB00BA879F /* CHNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHNetRequest.h; sourceTree = "<group>"; };
 		95B62F29213BB0BB00BA879F /* CHNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHNetRequest.m; sourceTree = "<group>"; };
+		95B62F2B213BBE3100BA879F /* HomePageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageModel.h; sourceTree = "<group>"; };
+		95B62F2C213BBE3100BA879F /* HomePageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 		95B62F26213BB04200BA879F /* model */ = {
 			isa = PBXGroup;
 			children = (
+				95B62F2B213BBE3100BA879F /* HomePageModel.h */,
+				95B62F2C213BBE3100BA879F /* HomePageModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				951424BE2120646900A420E7 /* ViewController.m in Sources */,
 				95A50A67212153D100E26896 /* UITableView+CHExtension.m in Sources */,
 				951424D72120759800A420E7 /* CHBaseTableViewCell.m in Sources */,
+				95B62F2D213BBE3100BA879F /* HomePageModel.m in Sources */,
 				95B62F2A213BB0BB00BA879F /* CHNetRequest.m in Sources */,
 				951424C92120646A00A420E7 /* main.m in Sources */,
 				951424D321206C1A00A420E7 /* CHToolsTableViewCell.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "CHBaseTableViewCell.h"
 
+@class HomeBannerItem;
 @interface CHBannerTableViewCell : CHBaseTableViewCell
-
+@property (nonatomic,strong)NSArray <HomeBannerItem *> *banners;
 @end

@@ -8,14 +8,32 @@
 
 #import "CHNetRequest.h"
 #import <AFNetworking.h>
+#import <NSDictionary+CHSafe.h>
 
 @implementation CHNetRequest
 
 + (void)requestSuccess:(void (^)(id))success failure:(void (^)(NSError *))fail
 {
-    [AFHTTPSessionManager manager] GET:<#(nonnull NSString *)#> parameters:<#(nullable id)#> progress:<#^(NSProgress * _Nonnull downloadProgress)downloadProgress#> success:<#^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)success#> failure:<#^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)failure#>
-    success(@"");
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/lichanghong/yongsheng/master/home.json"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+  
+    NSURLSessionDownloadTask *task = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        NSString *fullPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:response.suggestedFilename];
+        return [NSURL fileURLWithPath:fullPath];
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+       NSDictionary *resultDic = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:filePath] options:NSJSONReadingMutableLeaves error:nil];
+        if ( [resultDic safeIntegerForKey:@"errorCode"] == 0) {
+            success([resultDic safeDictionaryForKey:@"responseData"]);
+        }
+        else
+        {
+            fail(error);
+        }
+    }];
+    [task resume];
 }
+
 
 
 @end
