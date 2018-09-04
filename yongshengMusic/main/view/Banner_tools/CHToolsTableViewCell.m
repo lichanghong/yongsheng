@@ -15,7 +15,7 @@
 #import "HomePageModel.h"
 
 #define SY_CHANGEWIDTH(sy_width) sy_width * KScreenWidth / 375
-#define kTopMargin SY_CHANGEWIDTH(5)
+#define kTopMargin SY_CHANGEWIDTH(10)
 #define kLeftMargin 14
 #define kItemSpacing SY_CHANGEWIDTH(10)
 #define kItemWidth SY_CHANGEWIDTH(55)

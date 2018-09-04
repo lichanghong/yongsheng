@@ -16,6 +16,7 @@
 		951424D321206C1A00A420E7 /* CHToolsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 951424D121206C1A00A420E7 /* CHToolsTableViewCell.m */; };
 		951424D72120759800A420E7 /* CHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 951424D62120759800A420E7 /* CHBaseTableViewCell.m */; };
 		951424DA2120763600A420E7 /* CHBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 951424D92120763600A420E7 /* CHBannerTableViewCell.m */; };
+		95710D5E213EC557005A1796 /* CHNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95710D5D213EC557005A1796 /* CHNewsTableViewCell.m */; };
 		95A50A67212153D100E26896 /* UITableView+CHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A50A66212153D100E26896 /* UITableView+CHExtension.m */; };
 		95B62F2A213BB0BB00BA879F /* CHNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F29213BB0BB00BA879F /* CHNetRequest.m */; };
 		95B62F2D213BBE3100BA879F /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F2C213BBE3100BA879F /* HomePageModel.m */; };
@@ -46,6 +47,8 @@
 		951424D62120759800A420E7 /* CHBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHBaseTableViewCell.m; sourceTree = "<group>"; };
 		951424D82120763600A420E7 /* CHBannerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHBannerTableViewCell.h; sourceTree = "<group>"; };
 		951424D92120763600A420E7 /* CHBannerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHBannerTableViewCell.m; sourceTree = "<group>"; };
+		95710D5C213EC557005A1796 /* CHNewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHNewsTableViewCell.h; sourceTree = "<group>"; };
+		95710D5D213EC557005A1796 /* CHNewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHNewsTableViewCell.m; sourceTree = "<group>"; };
 		95A50A65212153D100E26896 /* UITableView+CHExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+CHExtension.h"; sourceTree = "<group>"; };
 		95A50A66212153D100E26896 /* UITableView+CHExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CHExtension.m"; sourceTree = "<group>"; };
 		95B62F28213BB0BB00BA879F /* CHNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHNetRequest.h; sourceTree = "<group>"; };
@@ -139,7 +142,16 @@
 		951424D421206D2200A420E7 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				95710D5B213EC537005A1796 /* News */,
+				95710D5A213EC513005A1796 /* Banner_tools */,
 				95B62F2E213C262200BA879F /* AnimationView */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		95710D5A213EC513005A1796 /* Banner_tools */ = {
+			isa = PBXGroup;
+			children = (
 				951424D52120759800A420E7 /* CHBaseTableViewCell.h */,
 				951424D62120759800A420E7 /* CHBaseTableViewCell.m */,
 				951424D221206C1A00A420E7 /* CHToolsTableViewCell.h */,
@@ -149,7 +161,16 @@
 				95A50A65212153D100E26896 /* UITableView+CHExtension.h */,
 				95A50A66212153D100E26896 /* UITableView+CHExtension.m */,
 			);
-			path = view;
+			path = Banner_tools;
+			sourceTree = "<group>";
+		};
+		95710D5B213EC537005A1796 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				95710D5C213EC557005A1796 /* CHNewsTableViewCell.h */,
+				95710D5D213EC557005A1796 /* CHNewsTableViewCell.m */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		95B62F26213BB04200BA879F /* model */ = {
@@ -307,6 +328,7 @@
 				95A50A67212153D100E26896 /* UITableView+CHExtension.m in Sources */,
 				95B62F36213C262200BA879F /* CHCardAnimationView.m in Sources */,
 				951424D72120759800A420E7 /* CHBaseTableViewCell.m in Sources */,
+				95710D5E213EC557005A1796 /* CHNewsTableViewCell.m in Sources */,
 				95B62F2D213BBE3100BA879F /* HomePageModel.m in Sources */,
 				95B62F2A213BB0BB00BA879F /* CHNetRequest.m in Sources */,
 				951424C92120646A00A420E7 /* main.m in Sources */,

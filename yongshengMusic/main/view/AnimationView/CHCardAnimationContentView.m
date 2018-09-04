@@ -59,7 +59,6 @@
 {
     if (!_nickName) {
         UILabel *label = [[UILabel alloc] init];
-        label.text = @"氧气迷_sun";
         label.font = [UIFont fontWithName:@"PingFangSC-Light" size:11];
         label.textColor = [UIColor colorWithRed:119/255.0 green:119/255.0 blue:119/255.0 alpha:1/1.0];
         _nickName = label;
@@ -83,7 +82,6 @@
 {
     if (!_titleLabel) {
         UILabel *label = [[UILabel alloc] init];
-        label.text = @"你以为的减肥很可能是增肥，体脂低动动就有马甲线";
         label.font = [UIFont fontWithName:@"PingFangSC-Regular" size:14];
         label.textColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1/1.0];
         label.numberOfLines = 2;
