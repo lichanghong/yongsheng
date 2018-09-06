@@ -16,6 +16,7 @@
 #import "HomePageModel.h"
 #import <YYModel.h>
 #import <UIImageView+WebCache.h>
+#import "CHHomeRouterModule.h"
 
 #define WEAKSELF __weak typeof(self) weakSelf = self;
 
@@ -30,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES];
     self.tableViewCellNames = @[
                                 @"CHBannerTableViewCell",
                                 @"CHToolsTableViewCell",
@@ -38,6 +40,7 @@
                                 ];
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.tableView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -47,8 +50,8 @@
     }
 
     WEAKSELF
-    [CHNetRequest requestSuccess:^(id result) {
-       weakSelf.homePageModel = [HomePageModel yy_modelWithJSON:result];
+    [CHNetRequest requestWithURL:API_Home Success:^(id result) {
+        weakSelf.homePageModel = [HomePageModel yy_modelWithJSON:result];
         [weakSelf.tableView reloadData];
     } failure:^(NSError *error) {
         

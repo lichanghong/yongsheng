@@ -1,9 +1,8 @@
 //
 //  SYNewToolsTableViewCell.m
-//  SoYoungMobile40
 //
 //  Created by Jeakon on 2017/7/10.
-//  Copyright © 2017年 soyoung. All rights reserved.
+//  Copyright © 2017年 lichanghong. All rights reserved.
 //
 
 #import "StyledPageControl.h"

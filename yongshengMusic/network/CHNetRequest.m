@@ -12,11 +12,10 @@
 
 @implementation CHNetRequest
 
-+ (void)requestSuccess:(void (^)(id))success failure:(void (^)(NSError *))fail
++ (void)requestWithURL:(NSString *)url Success:(void (^)(id))success failure:(void (^)(NSError *))fail
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSURL *url = [NSURL URLWithString:@"https://raw.githubusercontent.com/lichanghong/yongsheng/master/home.json"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
   
     NSURLSessionDownloadTask *task = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         NSString *fullPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:response.suggestedFilename];

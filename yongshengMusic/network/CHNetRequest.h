@@ -10,6 +10,6 @@
 
 @interface CHNetRequest : NSObject
 
-+ (void)requestSuccess:(void(^)(id result))success failure:(void(^)(NSError *error))fail;
++ (void)requestWithURL:(NSString *)url Success:(void (^)(id))success failure:(void (^)(NSError *))fail;
 
 @end

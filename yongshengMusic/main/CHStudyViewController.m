@@ -9,6 +9,10 @@
 #import "CHStudyViewController.h"
 #import "UITableView+CHExtension.h"
 #import "CHNewsTableViewCell.h"
+#import "CHHomeRouterModule.h"
+#import "CHNetRequest.h"
+
+#define WEAKSELF __weak typeof(self) weakSelf = self;
 
 @interface CHStudyViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
@@ -32,6 +36,14 @@
         Class cell = NSClassFromString(cellclass);
         [self.tableView registerClass:cell];
     }
+    
+    WEAKSELF
+    [CHNetRequest requestWithURL:API_Home_study Success:^(id result) {
+//        weakSelf.homePageModel = [HomePageModel yy_modelWithJSON:result];
+//        [weakSelf.tableView reloadData];
+    } failure:^(NSError *error) {
+        
+    }];
     
     // Do any additional setup after loading the view.
 }

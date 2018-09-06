@@ -26,6 +26,7 @@
 		951CA13921416AC600E00894 /* CHNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 951CA12D21416AC600E00894 /* CHNewsTableViewCell.m */; };
 		951CA13A21416AC600E00894 /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 951CA13021416AC600E00894 /* HomePageModel.m */; };
 		951CA13D21416B0F00E00894 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 951CA13B21416B0F00E00894 /* ViewController.m */; };
+		951CA14021416F7300E00894 /* CHHomeRouterModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 951CA13F21416F7300E00894 /* CHHomeRouterModule.m */; };
 		95B62F2A213BB0BB00BA879F /* CHNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F29213BB0BB00BA879F /* CHNetRequest.m */; };
 		EA5502E9B958E128457DB717 /* libPods-yongshengMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC84B19C8DB5EC1530A660D /* libPods-yongshengMusic.a */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,8 @@
 		951CA13021416AC600E00894 /* HomePageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageModel.m; sourceTree = "<group>"; };
 		951CA13B21416B0F00E00894 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		951CA13C21416B0F00E00894 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		951CA13E21416F7300E00894 /* CHHomeRouterModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHHomeRouterModule.h; sourceTree = "<group>"; };
+		951CA13F21416F7300E00894 /* CHHomeRouterModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHHomeRouterModule.m; sourceTree = "<group>"; };
 		95B62F28213BB0BB00BA879F /* CHNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHNetRequest.h; sourceTree = "<group>"; };
 		95B62F29213BB0BB00BA879F /* CHNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHNetRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +153,8 @@
 				951424C42120646A00A420E7 /* LaunchScreen.storyboard */,
 				951424C72120646A00A420E7 /* Info.plist */,
 				951424C82120646A00A420E7 /* main.m */,
+				951CA13E21416F7300E00894 /* CHHomeRouterModule.h */,
+				951CA13F21416F7300E00894 /* CHHomeRouterModule.m */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				951CA13621416AC600E00894 /* CHBaseTableViewCell.m in Sources */,
 				951CA13721416AC600E00894 /* CHToolsTableViewCell.m in Sources */,
 				951CA13221416AC600E00894 /* CHCardAnimationTableViewCell.m in Sources */,
+				951CA14021416F7300E00894 /* CHHomeRouterModule.m in Sources */,
 				951CA13421416AC600E00894 /* UIView+Shadow.m in Sources */,
 				951CA11621416ABB00E00894 /* CHTabBarController.m in Sources */,
 				951CA11521416ABB00E00894 /* CHAliViewController.m in Sources */,
