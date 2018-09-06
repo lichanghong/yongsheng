@@ -37,7 +37,6 @@
                                 @"CHNewsTableViewCell"
                                 ];
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    [self.tableView setScrollIndicatorInsets:UIEdgeInsetsZero];
     [self.tableView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;

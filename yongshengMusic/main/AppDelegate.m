@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "CHTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    CHTabBarController *tabVC = [[CHTabBarController alloc]init];
+    
+    self.window.rootViewController = tabVC;
     // Override point for customization after application launch.
     return YES;
 }

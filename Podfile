@@ -12,5 +12,7 @@ pod 'Masonry', '~> 1.1.0'
 pod 'CHBaseUtil', '~> 1.0.2'
 pod 'YYModel', '~> 1.0.4'
 pod 'AFNetworking', '~> 3.2.1'
+pod 'AFWebViewController'
+pod 'JPush', '~> 3.1.0'
  
 end

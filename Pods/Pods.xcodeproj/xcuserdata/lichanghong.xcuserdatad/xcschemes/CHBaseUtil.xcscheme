@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8CE71A14435E60D8583E9E9C5917B28D"
+               BlueprintIdentifier = "D1A6F2B6D739E1CDD1FD004CA5CA1D54"
                BlueprintName = "CHBaseUtil"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libCHBaseUtil.a">

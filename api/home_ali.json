@@ -1,0 +1,28 @@
+{
+    "errorCode": 0,
+    "errorMsg": "",
+    "responseData": {
+        "products": [
+            {
+                "img": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3632476635,370760416&fm=27&gp=0.jpg",
+                "url": "https://www.baidu.com",
+                "title": "这是第一张图片"
+            },
+            {
+                "img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520944054455&di=cc47835e24392e6ffa51463539524301&imgtype=0&src=http%3A%2F%2Fpic2.ooopic.com%2F10%2F57%2F50%2F93b1OOOPIC4d.jpg",
+                "url": "https://www.sina.com",
+                "title": "这是第二张图片"
+            },
+            {
+                "img": "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2275205136,3989077551&fm=27&gp=0.jpg",
+                "url": "https://www.kjson.com",
+                "title": "这是第三张图片"
+            },
+            {
+                "img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1521024592371&di=f05bd0d4e516f152bf7587ac7c8ebf5b&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01164155448e950000019ae95d8b93.jpg",
+                "url": "http://www.w3school.com.cn/json/json_syntax.asp",
+                "title": "这是第三张图片"
+            }
+        ] 
+    }
+}
