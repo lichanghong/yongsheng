@@ -8,11 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, CHAliViewControllerCellSection) {
-    CHAliViewControllerCellTypeSectionType = 0,
-    CHAliViewControllerCellTypeSectionAll
-};
-
+ 
 @interface CHAliViewController : UIViewController
 
 @end

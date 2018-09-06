@@ -11,12 +11,17 @@
 #import "CHNewsTableViewCell.h"
 #import "CHHomeRouterModule.h"
 #import "CHNetRequest.h"
+#import "HomeAliModel.h"
+#import <YYModel.h>
+#import <UIImageView+WebCache.h>
+#import "CHAliProductTableViewCell.h"
 
 #define WEAKSELF __weak typeof(self) weakSelf = self;
 
 @interface CHAliViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,copy)NSArray *tableViewCellNames;
+@property (nonatomic,strong)HomeAliModel *homeAliModel;
 
 @end
 
@@ -27,7 +32,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.tableViewCellNames = @[
-                                @"CHNewsTableViewCell"
+                                @"CHAliProductTableViewCell"
                                 ];
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.tableView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
@@ -39,9 +44,10 @@
         [self.tableView registerClass:cell];
     }
     
+    WEAKSELF
     [CHNetRequest requestWithURL:API_Home_ali Success:^(id result) {
-        //        weakSelf.homePageModel = [HomePageModel yy_modelWithJSON:result];
-        //        [weakSelf.tableView reloadData];
+        weakSelf.homeAliModel = [HomeAliModel yy_modelWithJSON:result];
+        [weakSelf.tableView reloadData];
     } failure:^(NSError *error) {
         
     }];
@@ -52,34 +58,17 @@
 
 -  (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return CHAliViewControllerCellTypeSectionAll;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    switch (section) {
-        case CHAliViewControllerCellTypeSectionType:
-            return  1;
-            break;
-            
-        default:
-            break;
-    }
-    return 0;
+   return  self.homeAliModel.aliModel.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat height = 0;
-    switch (indexPath.section) {
-        case CHAliViewControllerCellTypeSectionType:
-            height =  180;
-            break;
-            
-        default:
-            break;
-    }
-    return height;
+  return  self.homeAliModel.aliModel.count>0?80:0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -91,17 +80,11 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    switch (indexPath.section) {
-        case CHAliViewControllerCellTypeSectionType:
-        {
-            CHNewsTableViewCell *news = (CHNewsTableViewCell *)cell;
-            //赋值
-            break;
-        }
-            
-        default:
-            break;
-    }
+    
+    CHAliProductTableViewCell *aliCell = (CHAliProductTableViewCell *)cell;
+    //赋值
+    aliCell.aliItemEntity = [self.homeAliModel.aliModel objectAtIndex:indexPath.row];
+    
 }
 
 

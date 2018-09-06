@@ -27,6 +27,8 @@
 		951CA13A21416AC600E00894 /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 951CA13021416AC600E00894 /* HomePageModel.m */; };
 		951CA13D21416B0F00E00894 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 951CA13B21416B0F00E00894 /* ViewController.m */; };
 		951CA14021416F7300E00894 /* CHHomeRouterModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 951CA13F21416F7300E00894 /* CHHomeRouterModule.m */; };
+		951CA14321417ABF00E00894 /* HomeAliModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 951CA14221417ABF00E00894 /* HomeAliModel.m */; };
+		951CA14621417CA900E00894 /* CHAliProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 951CA14521417CA900E00894 /* CHAliProductTableViewCell.m */; };
 		95B62F2A213BB0BB00BA879F /* CHNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B62F29213BB0BB00BA879F /* CHNetRequest.m */; };
 		EA5502E9B958E128457DB717 /* libPods-yongshengMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC84B19C8DB5EC1530A660D /* libPods-yongshengMusic.a */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,10 @@
 		951CA13C21416B0F00E00894 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		951CA13E21416F7300E00894 /* CHHomeRouterModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHHomeRouterModule.h; sourceTree = "<group>"; };
 		951CA13F21416F7300E00894 /* CHHomeRouterModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHHomeRouterModule.m; sourceTree = "<group>"; };
+		951CA14121417ABF00E00894 /* HomeAliModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeAliModel.h; sourceTree = "<group>"; };
+		951CA14221417ABF00E00894 /* HomeAliModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeAliModel.m; sourceTree = "<group>"; };
+		951CA14421417CA900E00894 /* CHAliProductTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAliProductTableViewCell.h; sourceTree = "<group>"; };
+		951CA14521417CA900E00894 /* CHAliProductTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAliProductTableViewCell.m; sourceTree = "<group>"; };
 		95B62F28213BB0BB00BA879F /* CHNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHNetRequest.h; sourceTree = "<group>"; };
 		95B62F29213BB0BB00BA879F /* CHNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHNetRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +168,7 @@
 		951CA11821416AC600E00894 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				951CA14721417CAE00E00894 /* AliCell */,
 				951CA11921416AC600E00894 /* AnimationView */,
 				951CA12221416AC600E00894 /* Banner_tools */,
 				951CA12B21416AC600E00894 /* News */,
@@ -213,8 +220,19 @@
 			children = (
 				951CA12F21416AC600E00894 /* HomePageModel.h */,
 				951CA13021416AC600E00894 /* HomePageModel.m */,
+				951CA14121417ABF00E00894 /* HomeAliModel.h */,
+				951CA14221417ABF00E00894 /* HomeAliModel.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		951CA14721417CAE00E00894 /* AliCell */ = {
+			isa = PBXGroup;
+			children = (
+				951CA14421417CA900E00894 /* CHAliProductTableViewCell.h */,
+				951CA14521417CA900E00894 /* CHAliProductTableViewCell.m */,
+			);
+			path = AliCell;
 			sourceTree = "<group>";
 		};
 		95B62F27213BB04E00BA879F /* network */ = {
@@ -362,6 +380,8 @@
 				951CA13D21416B0F00E00894 /* ViewController.m in Sources */,
 				951CA13121416AC600E00894 /* CHCardAnimationContentView.m in Sources */,
 				951CA13A21416AC600E00894 /* HomePageModel.m in Sources */,
+				951CA14621417CA900E00894 /* CHAliProductTableViewCell.m in Sources */,
+				951CA14321417ABF00E00894 /* HomeAliModel.m in Sources */,
 				951CA13621416AC600E00894 /* CHBaseTableViewCell.m in Sources */,
 				951CA13721416AC600E00894 /* CHToolsTableViewCell.m in Sources */,
 				951CA13221416AC600E00894 /* CHCardAnimationTableViewCell.m in Sources */,
