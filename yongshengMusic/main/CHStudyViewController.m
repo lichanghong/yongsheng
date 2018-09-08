@@ -32,7 +32,7 @@
                                 @"CHNewsTableViewCell"
                                 ];
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    [self.tableView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+    [self.tableView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentAutomatic];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -75,7 +75,7 @@
     CGFloat height = 0;
     switch (indexPath.section) {
         case CHStudyViewControllerCellTypeSectionType:
-            height =  self.courceModel.cource.count>0?180:0;
+            height =  self.courceModel.cource.count>0?110:0;
             break;
       
         default:
@@ -96,10 +96,11 @@
     switch (indexPath.section) {
         case CHStudyViewControllerCellTypeSectionType:
         {
+            HomeCourceItem *item = [self.courceModel.cource objectAtIndex:indexPath.row];
             CHNewsTableViewCell *workCell = (CHNewsTableViewCell *)cell;
-            workCell.title.text = @"学生作品sadfsadfsdaf";
-            workCell.subTitle.text = @"sub zuopin";
-            [workCell.mImageView sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536079410591&di=25c321a3c7fd74e561900dd038d42747&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Dcbd7355ba74bd11310c0bf7132c6ce7a%2F72f082025aafa40f48b91ff5a164034f78f0199e.jpg"]];
+            workCell.title.text = item.title;
+            workCell.subTitle.text = item.url;
+            [workCell.mImageView sd_setImageWithURL:[NSURL URLWithString:item.img]];
             
             break;
         }
