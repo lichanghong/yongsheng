@@ -13,7 +13,6 @@
 
 @property (nonatomic,strong)HomeAliItemEntity *aliItemEntity;
 
-
 @property (nonatomic,strong)UIImageView *mImageView;
 @property (nonatomic,strong)UILabel *titleLabel;
 @property (nonatomic,strong)UILabel *priceLabel;

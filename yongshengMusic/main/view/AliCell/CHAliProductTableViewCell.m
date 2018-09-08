@@ -31,7 +31,7 @@
         self.titleLabel.frame      = CGRectMake(120, 15, KScreenWidth-110, 20);
         self.priceLabel.frame   = CGRectMake(120, 45, KScreenWidth-110, 20);
         self.subpriceLabel.frame   = CGRectMake(180, 45, KScreenWidth-110, 20);
-        self.salesLabel.frame   = CGRectMake(120, 85, KScreenWidth-110, 20);
+        self.salesLabel.frame   = CGRectMake(120, 65, KScreenWidth-110, 20);
     }
     return self;
 }

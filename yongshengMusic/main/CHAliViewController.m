@@ -35,10 +35,11 @@
                                 @"CHAliProductTableViewCell"
                                 ];
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    [self.tableView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+    [self.tableView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentAutomatic];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+
     for (NSString *cellclass in self.tableViewCellNames) {
         Class cell = NSClassFromString(cellclass);
         [self.tableView registerClass:cell];
@@ -84,7 +85,6 @@
     CHAliProductTableViewCell *aliCell = (CHAliProductTableViewCell *)cell;
     //赋值
     aliCell.aliItemEntity = [self.homeAliModel.aliModel objectAtIndex:indexPath.row];
-    
 }
 
 
