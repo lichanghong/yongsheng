@@ -13,6 +13,7 @@
 @property (nonatomic,strong) NSArray <HomeBannerItem *>*banners;
 @property (nonatomic,strong) NSArray <HomeBannerItem *>*iconList;
 @property (nonatomic,strong) NSArray <HomeStudentWorkEntity *>*studentWork;
+@property (nonatomic,strong) NSArray <HomeStudentWorkEntity *>*schoolNews;
 
 @end
 

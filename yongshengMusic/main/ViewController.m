@@ -17,6 +17,7 @@
 #import <YYModel.h>
 #import <UIImageView+WebCache.h>
 #import "CHHomeRouterModule.h"
+#import <UIView+CHFrame.h>
 
 #define WEAKSELF __weak typeof(self) weakSelf = self;
 
@@ -29,8 +30,10 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     [self.navigationController setNavigationBarHidden:YES];
     self.tableViewCellNames = @[
                                 @"CHBannerTableViewCell",
@@ -38,10 +41,19 @@
                                 @"CHCardAnimationTableViewCell",
                                 @"CHNewsTableViewCell"
                                 ];
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    [self.tableView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
-
+    CGRect rect = CGRectMake(0, 0, KScreenWidth, KScreenHeight-self.tabBarController.tabBar.height);
+    self.tableView = [[UITableView alloc]initWithFrame:rect style:UITableViewStylePlain];
+//    [self.tableView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
     [self.view addSubview:self.tableView];
+    if (@available(iOS 11.0, *)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        // est和代理 可选1个
+        self.tableView.estimatedSectionFooterHeight = 0;
+        self.tableView.estimatedSectionHeaderHeight = 0;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+   
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     for (NSString *cellclass in self.tableViewCellNames) {
@@ -58,9 +70,8 @@
     }];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
-    
 }
+
 
 -  (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -79,7 +90,7 @@
             return  self.homePageModel.studentWork.count > 0?1:0;
             break;
         case CHViewControllerCellTypeSectionNews:
-            return  10;
+            return self.homePageModel.schoolNews.count>0? 1:0;
             break;
         default:
             break;
@@ -103,10 +114,10 @@
             else height = 0;
             break;
         case CHViewControllerCellTypeSectionWorks:
-            height = 180;
+            height = self.homePageModel.studentWork.count>0?180:0;
             break;
         case CHViewControllerCellTypeSectionNews:
-            height = 80;
+            height = self.homePageModel.schoolNews.count>0?80:0;
             break;
         default:
             break;
@@ -158,7 +169,7 @@
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;   // custom view for header. will be adjusted to default or specified header height
 {
-    if (section == CHViewControllerCellTypeSectionNews) {
+    if (section == CHViewControllerCellTypeSectionNews && self.homePageModel.schoolNews.count>0) {
         UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 5, 100, 20)];
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(12, 0, 100, 20)];
         label.text = @"校内新闻";
@@ -167,6 +178,14 @@
         return view;
     }
     else return [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
+{
+    if (section == CHViewControllerCellTypeSectionNews && self.homePageModel.schoolNews.count>0) {
+        return 20;
+    }
+    else return 0;
 }
 
 - (void)didReceiveMemoryWarning {

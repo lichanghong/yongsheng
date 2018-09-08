@@ -75,7 +75,7 @@
     CGFloat height = 0;
     switch (indexPath.section) {
         case CHStudyViewControllerCellTypeSectionType:
-            height =  self.courceModel.cource.count>0?110:0;
+            height =  self.courceModel.cource.count>0?90:0;
             break;
       
         default:
@@ -99,7 +99,7 @@
             HomeCourceItem *item = [self.courceModel.cource objectAtIndex:indexPath.row];
             CHNewsTableViewCell *workCell = (CHNewsTableViewCell *)cell;
             workCell.title.text = item.title;
-            workCell.subTitle.text = item.url;
+            workCell.subTitle.text = item.subtitle;
             [workCell.mImageView sd_setImageWithURL:[NSURL URLWithString:item.img]];
             
             break;
