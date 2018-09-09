@@ -25,14 +25,14 @@
         self.layer.shadowColor = [[UIColor blackColor] colorWithAlphaComponent:0.1].CGColor;
         self.layer.borderColor = [UIColor colorForHex:@"EFEFEF"].CGColor;
 
-        self.portraitImageView = [self portraitImageView];
+//        self.portraitImageView = [self portraitImageView];
         self.leftImageView = [self leftImageView];
         self.titleLabel = [self titleLabel];
         self.nickName = [self nickName];
         
         [self addSubview:self.leftImageView];
         [self addSubview:self.titleLabel];
-        [self addSubview:self.portraitImageView];
+//        [self addSubview:self.portraitImageView];
         [self addSubview:self.nickName];
         [self refreshUI];
         
@@ -43,9 +43,9 @@
 - (void)refreshUI
 {
     self.leftImageView.frame = CGRectMake(0, 0, 129, self.height);
-    self.portraitImageView.frame = CGRectMake(self.leftImageView.right+12, self.height-16-10, 16, 16);
-    self.nickName.frame = CGRectMake(178, self.portraitImageView.y, 90, 16);
-    self.titleLabel.frame = CGRectMake(154, self.nickName.y-8-44, 188, 44);
+//    self.portraitImageView.frame = CGRectMake(self.leftImageView.right+12, self.height-16-10, 16, 16);
+    self.nickName.frame = CGRectMake(self.leftImageView.right+12, self.height-16-10, 90, 16);
+    self.titleLabel.frame = CGRectMake(self.leftImageView.right+12, self.nickName.y-8-44, 188, 44);
 
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:_leftImageView.bounds byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerTopLeft cornerRadii:CGSizeMake(8, 8)];
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
@@ -71,7 +71,7 @@
 - (UIImageView *)portraitImageView
 {
     if (!_portraitImageView) {
-        _portraitImageView = [[UIImageView alloc]init];
+//        _portraitImageView = [[UIImageView alloc]init];
         [_portraitImageView.layer setCornerRadius:8];
         _portraitImageView.backgroundColor = [UIColor clearColor];
     }
