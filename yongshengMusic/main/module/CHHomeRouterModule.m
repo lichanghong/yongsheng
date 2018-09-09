@@ -17,32 +17,40 @@ NSString * API_Home_study = @"https://raw.githubusercontent.com/lichanghong/yong
 NSString * API_Home_ali = @"https://raw.githubusercontent.com/lichanghong/yongsheng/master/api/home_ali.json";
 
 NSString *const CHRouterHomeURLPattern = @"com.haihong://router/home";
+NSString *const CHRouterPurchaseURLPattern = @"com.haihong://router/purchase";
 
 @implementation CHHomeRouterModule
 
 
 - (NSArray *)routerURLs
 {
-    return @[CHRouterHomeURLPattern];
+    return @[CHRouterHomeURLPattern,CHRouterPurchaseURLPattern];
 }
 
 - (CHRouterResponse *)handleURL:(NSString *)url handleInfo:(CHRouterHandleInfo *)handleInfo
 {
     CHRouterResponse *response = [[CHRouterResponse alloc] init];
     NSDictionary *parameters = handleInfo.parameters; // 入参
-    NSArray *imgs = [parameters safeArrayForKey:@"imgs"];
     UIViewController *targetViewController = nil;
     if ([url isEqualToString:CHRouterHomeURLPattern]) {
+        NSArray *imgs = [parameters safeArrayForKey:@"imgs"];
         NSMutableString *html = [NSMutableString string];
         for (int i=0; i<imgs.count; i++) {
             NSString *img = [[NSString alloc]initWithFormat:@"<img src=\"%@\"/> <br/>",[imgs safeObjectAtIndex:i]];
             [html appendString:img];
         }
  
-        UIImage sdwe
         AFWebViewController *webViewController = [AFWebViewController
          webViewControllerWithHTMLString:html andBaseURL:nil];
         webViewController.navigationItem.title = [parameters safeStringForKey:@"pagetitle"];
+        webViewController.toolbarTintColor = [UIColor orangeColor]; // Does not work on iPad
+        targetViewController = webViewController;
+    }
+   else if ([url isEqualToString:CHRouterPurchaseURLPattern]) {
+       NSString *target_url = [parameters safeStringForKey:@"target_url"];
+
+        AFWebViewController *webViewController = [AFWebViewController
+                                                  webViewControllerWithAddress:target_url];
         webViewController.toolbarTintColor = [UIColor orangeColor]; // Does not work on iPad
         targetViewController = webViewController;
     }

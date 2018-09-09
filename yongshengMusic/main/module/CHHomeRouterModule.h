@@ -12,6 +12,7 @@ OBJC_EXTERN NSString* API_Home;
 OBJC_EXTERN NSString* API_Home_study;
 OBJC_EXTERN NSString* API_Home_ali;
 OBJC_EXTERN NSString *const CHRouterHomeURLPattern;
+OBJC_EXTERN NSString *const CHRouterPurchaseURLPattern;
 
 @interface CHHomeRouterModule : RouterBaseModule
 

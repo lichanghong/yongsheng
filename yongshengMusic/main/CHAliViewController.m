@@ -12,6 +12,7 @@
 #import "CHHomeRouterModule.h"
 #import "CHNetRequest.h"
 #import "HomeAliModel.h"
+#import <CHBaseUtil.h>
 #import <YYModel.h>
 #import <UIImageView+WebCache.h>
 #import "CHAliProductTableViewCell.h"
@@ -69,7 +70,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  return  self.homeAliModel.aliModel.count>0?80:0;
+  return  self.homeAliModel.aliModel.count>0?120:0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,6 +88,11 @@
     aliCell.aliItemEntity = [self.homeAliModel.aliModel objectAtIndex:indexPath.row];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HomeAliItemEntity *item = [self.homeAliModel.aliModel objectAtIndex:indexPath.row];
+    [self ch_openURL:CHRouterPurchaseURLPattern routerParameters:@{@"target_url":item.target_url?:@""} sourceViewController:self];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
