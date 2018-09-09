@@ -163,8 +163,6 @@
 				951424C42120646A00A420E7 /* LaunchScreen.storyboard */,
 				951424C72120646A00A420E7 /* Info.plist */,
 				951424C82120646A00A420E7 /* main.m */,
-				951CA13E21416F7300E00894 /* CHHomeRouterModule.h */,
-				951CA13F21416F7300E00894 /* CHHomeRouterModule.m */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -244,6 +242,8 @@
 		9590C07B21451AD500201EF7 /* module */ = {
 			isa = PBXGroup;
 			children = (
+				951CA13E21416F7300E00894 /* CHHomeRouterModule.h */,
+				951CA13F21416F7300E00894 /* CHHomeRouterModule.m */,
 			);
 			path = module;
 			sourceTree = "<group>";
