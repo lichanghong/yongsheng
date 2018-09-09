@@ -16,6 +16,7 @@
 
 @interface HomeCourceItem : NSObject
 @property (nonatomic,strong) NSString *title;
+@property (nonatomic,strong) NSString *page_title;
 @property (nonatomic,strong) NSArray *imgs;
 
 @end

@@ -12,7 +12,7 @@
 
 
 NSString * API_Home = @"https://raw.githubusercontent.com/lichanghong/yongsheng/master/api/home.json";
-NSString * API_Home_study = @"https://raw.githubusercontent.com/lichanghong/yongsheng/master/api/home_study.json";
+NSString * API_Home_study = @"https://raw.githubusercontent.com/lichanghong/yongsheng/master/api/home_study2.json";
 NSString * API_Home_ali = @"https://raw.githubusercontent.com/lichanghong/yongsheng/master/api/home_ali.json";
 
 NSString *const CHRouterHomeURLPattern = @"com.haihong://router/home";
@@ -28,11 +28,19 @@ NSString *const CHRouterHomeURLPattern = @"com.haihong://router/home";
 - (CHRouterResponse *)handleURL:(NSString *)url handleInfo:(CHRouterHandleInfo *)handleInfo
 {
     CHRouterResponse *response = [[CHRouterResponse alloc] init];
-//    NSDictionary *parameters = handleInfo.parameters; // 入参
-    
+    NSDictionary *parameters = handleInfo.parameters; // 入参
+    NSArray *imgs = [parameters safeArrayForKey:@"imgs"];
     UIViewController *targetViewController = nil;
     if ([url isEqualToString:CHRouterHomeURLPattern]) {
-        AFWebViewController *webViewController = [AFWebViewController webViewControllerWithAddress:@"https://baidu.com"];
+        NSMutableString *html = [NSMutableString string];
+        for (int i=0; i<imgs.count; i++) {
+            NSString *img = [[NSString alloc]initWithFormat:@"<img src=\"%@\"/> <br/>",[imgs safeObjectAtIndex:i]];
+            [html appendString:img];
+        }
+ 
+        AFWebViewController *webViewController = [AFWebViewController
+         webViewControllerWithHTMLString:html andBaseURL:nil];
+        webViewController.navigationItem.title = [parameters safeStringForKey:@"pagetitle"];
         webViewController.toolbarTintColor = [UIColor orangeColor]; // Does not work on iPad
         targetViewController = webViewController;
     }
