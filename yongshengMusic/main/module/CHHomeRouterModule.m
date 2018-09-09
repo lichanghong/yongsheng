@@ -9,10 +9,11 @@
 #import "CHHomeRouterModule.h"
 #import <AFWebViewController.h>
 #import <CHBaseUtil.h>
+#import <UIImageView+WebCache.h>
 
 
 NSString * API_Home = @"https://raw.githubusercontent.com/lichanghong/yongsheng/master/api/home.json";
-NSString * API_Home_study = @"https://raw.githubusercontent.com/lichanghong/yongsheng/master/api/home_study2.json";
+NSString * API_Home_study = @"https://raw.githubusercontent.com/lichanghong/yongsheng/master/api/home_study.json";
 NSString * API_Home_ali = @"https://raw.githubusercontent.com/lichanghong/yongsheng/master/api/home_ali.json";
 
 NSString *const CHRouterHomeURLPattern = @"com.haihong://router/home";
@@ -38,6 +39,7 @@ NSString *const CHRouterHomeURLPattern = @"com.haihong://router/home";
             [html appendString:img];
         }
  
+        UIImage sdwe
         AFWebViewController *webViewController = [AFWebViewController
          webViewControllerWithHTMLString:html andBaseURL:nil];
         webViewController.navigationItem.title = [parameters safeStringForKey:@"pagetitle"];
