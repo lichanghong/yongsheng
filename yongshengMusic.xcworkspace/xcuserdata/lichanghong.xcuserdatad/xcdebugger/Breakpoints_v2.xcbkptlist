@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/CHBaseUtil/CHBaseUtil_Router/Classes/RouterBaseModule.m"
-            timestampString = "558181559.4892499"
+            timestampString = "558181710.796504"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
@@ -58,7 +58,7 @@
                   moduleName = "yongshengMusic"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zftank/Desktop/lichanghong_bash/yongsheng/Pods/CHBaseUtil/CHBaseUtil_Router/Classes/RouterBaseModule.m"
-                  timestampString = "558181559.606741"
+                  timestampString = "558181710.945014"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
@@ -73,7 +73,7 @@
                   moduleName = "yongshengMusic"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zftank/Desktop/lichanghong_bash/yongsheng/Pods/CHBaseUtil/CHBaseUtil_Router/Classes/RouterBaseModule.m"
-                  timestampString = "558181559.608657"
+                  timestampString = "558181710.947801"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "yongshengMusic/main/CHStudyViewController.m"
-            timestampString = "558181559.489316"
+            timestampString = "558181710.7965699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -106,28 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "yongshengMusic/main/CHStudyViewController.m"
-            timestampString = "558181559.4893579"
+            timestampString = "558181710.796612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "yongshengMusic/network/CHNetRequest.m"
-            timestampString = "558181571.521292"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "+requestWithURL:Success:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
