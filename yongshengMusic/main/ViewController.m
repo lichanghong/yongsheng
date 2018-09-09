@@ -15,9 +15,11 @@
 #import "CHNetRequest.h"
 #import "HomePageModel.h"
 #import <YYModel.h>
+#import <AXWebViewController.h>
 #import <UIImageView+WebCache.h>
 #import "CHHomeRouterModule.h"
 #import <UIView+CHFrame.h>
+#import <CHBaseUtil.h>
 
 #define WEAKSELF __weak typeof(self) weakSelf = self;
 
@@ -30,6 +32,13 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+    [self.tabBarController.tabBar setHidden:NO];
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -166,6 +175,16 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.navigationController setNavigationBarHidden:NO];
+    NSString *url = @"https://lichanghong.github.io/web/other/h5";
+    AXWebViewController *webVC = [[AXWebViewController alloc] initWithAddress:url];
+    webVC.navigationController.navigationBar.translucent = NO;
+    [self.navigationController pushViewController:webVC animated:YES];
+    
+    [self.tabBarController.tabBar setHidden:YES];
+}
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;   // custom view for header. will be adjusted to default or specified header height
 {

@@ -92,32 +92,22 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/AFWebViewController/AFWebViewController/AFWebViewController.bundle"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity.png"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@2x.png"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@2x~ipad.png"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@3x.png"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@3x~ipad.png"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity~ipad.png"
+  install_resource "${PODS_ROOT}/AXIndicatorView/AXIndicatorView/Classes/AXIndicatorView.bundle"
+  install_resource "${PODS_ROOT}/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD.bundle"
+  install_resource "${PODS_ROOT}/AXWebViewController/AXWebViewController/AXWebViewController/AXWebViewController.bundle"
   install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal.png"
   install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal@2x.png"
   install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected.png"
   install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected@2x.png"
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/TUSafariActivity/TUSafariActivity.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/AFWebViewController/AFWebViewController/AFWebViewController.bundle"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity.png"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@2x.png"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@2x~ipad.png"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@3x.png"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@3x~ipad.png"
-  install_resource "${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity~ipad.png"
+  install_resource "${PODS_ROOT}/AXIndicatorView/AXIndicatorView/Classes/AXIndicatorView.bundle"
+  install_resource "${PODS_ROOT}/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD.bundle"
+  install_resource "${PODS_ROOT}/AXWebViewController/AXWebViewController/AXWebViewController/AXWebViewController.bundle"
   install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal.png"
   install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal@2x.png"
   install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected.png"
   install_resource "${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected@2x.png"
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/TUSafariActivity/TUSafariActivity.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

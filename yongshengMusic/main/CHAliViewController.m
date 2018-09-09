@@ -28,6 +28,11 @@
 
 @implementation CHAliViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -92,6 +97,7 @@
 {
     HomeAliItemEntity *item = [self.homeAliModel.aliModel objectAtIndex:indexPath.row];
     [self ch_openURL:CHRouterPurchaseURLPattern routerParameters:@{@"target_url":item.target_url?:@""} sourceViewController:self];
+
 }
 
 - (void)didReceiveMemoryWarning {

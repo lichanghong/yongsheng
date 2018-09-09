@@ -7,9 +7,9 @@
 //
 
 #import "CHHomeRouterModule.h"
-#import <AFWebViewController.h>
 #import <CHBaseUtil.h>
 #import <UIImageView+WebCache.h>
+#import <AXWebViewController.h>
 
 
 NSString * API_Home = @"https://raw.githubusercontent.com/lichanghong/yongsheng/master/api/home.json";
@@ -34,25 +34,30 @@ NSString *const CHRouterPurchaseURLPattern = @"com.haihong://router/purchase";
     UIViewController *targetViewController = nil;
     if ([url isEqualToString:CHRouterHomeURLPattern]) {
         NSArray *imgs = [parameters safeArrayForKey:@"imgs"];
+        NSInteger show = [parameters safeIntegerForKey:@"show_bar"];
         NSMutableString *html = [NSMutableString string];
         for (int i=0; i<imgs.count; i++) {
             NSString *img = [[NSString alloc]initWithFormat:@"<img src=\"%@\"/> <br/>",[imgs safeObjectAtIndex:i]];
             [html appendString:img];
         }
- 
-        AFWebViewController *webViewController = [AFWebViewController
-         webViewControllerWithHTMLString:html andBaseURL:nil];
-        webViewController.navigationItem.title = [parameters safeStringForKey:@"pagetitle"];
-        webViewController.toolbarTintColor = [UIColor orangeColor]; // Does not work on iPad
-        targetViewController = webViewController;
+        
+        AXWebViewController *webVC = [[AXWebViewController alloc]initWithHTMLString:html baseURL:nil];
+        if (show != 0) {
+            webVC.showsToolBar = YES;
+            webVC.navigationType = AXWebViewControllerNavigationToolItem;
+        }
+        webVC.navigationItem.title = [parameters safeStringForKey:@"pagetitle"];
+        webVC.navigationController.navigationBar.translucent = NO;
+        targetViewController = webVC;
     }
    else if ([url isEqualToString:CHRouterPurchaseURLPattern]) {
        NSString *target_url = [parameters safeStringForKey:@"target_url"];
-
-        AFWebViewController *webViewController = [AFWebViewController
-                                                  webViewControllerWithAddress:target_url];
-        webViewController.toolbarTintColor = [UIColor orangeColor]; // Does not work on iPad
-        targetViewController = webViewController;
+       AXWebViewController *webVC = [[AXWebViewController alloc]initWithAddress:target_url];
+       webVC.showsToolBar = YES;
+       webVC.navigationType = AXWebViewControllerNavigationToolItem;
+       webVC.navigationItem.title = [parameters safeStringForKey:@"pagetitle"];
+       webVC.navigationController.navigationBar.translucent = NO;
+       targetViewController = webVC;
     }
     
     [self transitionViewController:targetViewController WithHandleInfo:handleInfo animated:YES];

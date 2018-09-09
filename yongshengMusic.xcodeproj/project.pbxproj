@@ -350,33 +350,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-yongshengMusic/Pods-yongshengMusic-resources.sh",
-				"${PODS_ROOT}/AFWebViewController/AFWebViewController/AFWebViewController.bundle",
-				"${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity.png",
-				"${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@2x.png",
-				"${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@2x~ipad.png",
-				"${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@3x.png",
-				"${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity@3x~ipad.png",
-				"${PODS_ROOT}/ARChromeActivity/ARChromeActivity/ARChromeActivity~ipad.png",
+				"${PODS_ROOT}/AXIndicatorView/AXIndicatorView/Classes/AXIndicatorView.bundle",
+				"${PODS_ROOT}/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD.bundle",
+				"${PODS_ROOT}/AXWebViewController/AXWebViewController/AXWebViewController/AXWebViewController.bundle",
 				"${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal.png",
 				"${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-normal@2x.png",
 				"${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected.png",
 				"${PODS_ROOT}/StyledPageControl/StyledPageControlDemo/PageControlDemo/Resources/pagecontrol-thumb-selected@2x.png",
-				"${PODS_CONFIGURATION_BUILD_DIR}/TUSafariActivity/TUSafariActivity.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AFWebViewController.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ARChromeActivity.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ARChromeActivity@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ARChromeActivity@2x~ipad.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ARChromeActivity@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ARChromeActivity@3x~ipad.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ARChromeActivity~ipad.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AXIndicatorView.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AXPracticalHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AXWebViewController.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pagecontrol-thumb-normal.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pagecontrol-thumb-normal@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pagecontrol-thumb-selected.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pagecontrol-thumb-selected@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TUSafariActivity.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

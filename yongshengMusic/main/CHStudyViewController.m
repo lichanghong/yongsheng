@@ -111,7 +111,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     HomeCourceItem *item = [self.courceModel.cource objectAtIndex:indexPath.row];
-    [self ch_openURL:CHRouterHomeURLPattern routerParameters:@{@"imgs":item.imgs?item.imgs:@"",@"pagetitle":item.page_title?:@""} sourceViewController:self];
+    [self ch_openURL:CHRouterHomeURLPattern routerParameters:@{@"imgs":item.imgs?item.imgs:@"",@"pagetitle":item.page_title?:@"",@"show_bar":@0 } sourceViewController:self];
 }
  
 
