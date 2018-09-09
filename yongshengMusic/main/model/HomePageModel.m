@@ -12,13 +12,15 @@
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"banners" : [HomeBannerItem class],
              @"iconList" : [HomeBannerItem class],
-             @"studentWork":[HomeStudentWorkEntity class]
+             @"studentWork":[HomeStudentWorkEntity class],
+              @"schoolNews": [HomeStudentWorkEntity class]
              };
 }
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"banners"  : @"banner",
              @"iconList"  : @"icon_list",
-             @"studentWork": @"student_work"
+             @"studentWork": @"student_work",
+             @"schoolNews": @"school_news"
              };
 }
 
