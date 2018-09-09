@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3DB78913F56721A85838299ECA02FDEF"
+               BlueprintIdentifier = "DED1B8091E0DA4266AFB3E8869EBE088"
                BlueprintName = "TUSafariActivity"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libTUSafariActivity.a">

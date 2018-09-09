@@ -145,6 +145,7 @@
 		951424CF2120648200A420E7 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				9590C07B21451AD500201EF7 /* module */,
 				951CA12E21416AC600E00894 /* model */,
 				951CA11821416AC600E00894 /* view */,
 				951CA10F21416ABA00E00894 /* CHAliViewController.h */,
@@ -238,6 +239,13 @@
 				951CA14521417CA900E00894 /* CHAliProductTableViewCell.m */,
 			);
 			path = AliCell;
+			sourceTree = "<group>";
+		};
+		9590C07B21451AD500201EF7 /* module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = module;
 			sourceTree = "<group>";
 		};
 		95B62F27213BB04E00BA879F /* network */ = {

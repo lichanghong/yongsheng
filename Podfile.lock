@@ -18,18 +18,22 @@ PODS:
     - ARChromeActivity (~> 1.0.4)
     - TUSafariActivity (~> 1.0.4)
   - ARChromeActivity (1.0.6)
-  - CHBaseUtil (1.0.2):
-    - CHBaseUtil/JKDBModel (= 1.0.2)
-    - CHBaseUtil/Router (= 1.0.2)
-    - CHBaseUtil/Safe (= 1.0.2)
-    - CHBaseUtil/UI (= 1.0.2)
-    - CHBaseUtil/VC (= 1.0.2)
-  - CHBaseUtil/JKDBModel (1.0.2):
+  - CHBaseUtil (1.0.7):
+    - CHBaseUtil/FLEXInspector (= 1.0.7)
+    - CHBaseUtil/JKDBModel (= 1.0.7)
+    - CHBaseUtil/Router (= 1.0.7)
+    - CHBaseUtil/Safe (= 1.0.7)
+    - CHBaseUtil/UI (= 1.0.7)
+    - CHBaseUtil/Util (= 1.0.7)
+    - CHBaseUtil/VC (= 1.0.7)
+  - CHBaseUtil/FLEXInspector (1.0.7)
+  - CHBaseUtil/JKDBModel (1.0.7):
     - FMDB (~> 2.7.2)
-  - CHBaseUtil/Router (1.0.2)
-  - CHBaseUtil/Safe (1.0.2)
-  - CHBaseUtil/UI (1.0.2)
-  - CHBaseUtil/VC (1.0.2)
+  - CHBaseUtil/Router (1.0.7)
+  - CHBaseUtil/Safe (1.0.7)
+  - CHBaseUtil/UI (1.0.7)
+  - CHBaseUtil/Util (1.0.7)
+  - CHBaseUtil/VC (1.0.7)
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
@@ -49,7 +53,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - AFWebViewController
-  - CHBaseUtil (~> 1.0.2)
+  - CHBaseUtil (~> 1.0.7)
   - JPush (~> 3.1.0)
   - Masonry (~> 1.1.0)
   - SDCycleScrollView (~> 1.75)
@@ -76,7 +80,7 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   AFWebViewController: 3cee572a8e043f3ca7c5b5906dac149cb740ed1f
   ARChromeActivity: 5dcf9b9f09323761f992aff3525cdd777f83609d
-  CHBaseUtil: 63eb4260496ea953db2c28d468fd3d9a2a10ea56
+  CHBaseUtil: 227a9b715a7bef6a24ad6c59d971990d74809fd9
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   JCore: f14c0549968a63c22e246a4875aa9d428446f373
   JPush: 5921e25ad13e0386351079217b009f2039084eac
@@ -87,6 +91,6 @@ SPEC CHECKSUMS:
   TUSafariActivity: afc55a00965377939107ce4fdc7f951f62454546
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 429f8ca47513ed27837242552bc53366c09f10f6
+PODFILE CHECKSUM: 27f30837e4ae3c3e65258141bf257b0bfb2620eb
 
 COCOAPODS: 1.5.3

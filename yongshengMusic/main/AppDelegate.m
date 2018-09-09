@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "CHTabBarController.h"
+#import <CHBaseUtil.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [[CHRouter sharedInstance] registerAllModules];
+    
     CHTabBarController *tabVC = [[CHTabBarController alloc]init];
     
     self.window.rootViewController = tabVC;

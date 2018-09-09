@@ -8,9 +8,10 @@
 
 #import "RouterBaseModule.h"
 
-extern NSString* API_Home;
-extern NSString* API_Home_study;
-extern NSString* API_Home_ali;
+OBJC_EXTERN NSString* API_Home;
+OBJC_EXTERN NSString* API_Home_study;
+OBJC_EXTERN NSString* API_Home_ali;
+OBJC_EXTERN NSString *const CHRouterHomeURLPattern;
 
 @interface CHHomeRouterModule : RouterBaseModule
 

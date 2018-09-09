@@ -90,7 +90,7 @@
             return  self.homePageModel.studentWork.count > 0?1:0;
             break;
         case CHViewControllerCellTypeSectionNews:
-            return self.homePageModel.schoolNews.count>0? 1:0;
+            return self.homePageModel.schoolNews.count>0?self.homePageModel.schoolNews.count:0;
             break;
         default:
             break;
@@ -154,11 +154,11 @@
             break;
         }
         case CHViewControllerCellTypeSectionNews:{
+            HomeStudentWorkEntity*entity = [self.homePageModel.schoolNews objectAtIndex:indexPath.row];
             CHNewsTableViewCell *workCell = (CHNewsTableViewCell *)cell;
-            workCell.title.text = @"学生作品sadfsadfsdaf";
-            workCell.subTitle.text = @"sub zuopin";
-            [workCell.mImageView sd_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536079410591&di=25c321a3c7fd74e561900dd038d42747&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3Dcbd7355ba74bd11310c0bf7132c6ce7a%2F72f082025aafa40f48b91ff5a164034f78f0199e.jpg"]];
-//            workCell.cardAnimationView.cardViewEntityList = [self.homePageModel.studentWork mutableCopy];
+            workCell.title.text = entity.title;
+            workCell.subTitle.text = entity.nick_name;
+            [workCell.mImageView sd_setImageWithURL:[NSURL URLWithString:entity.img]];
             break;
         }
         default:

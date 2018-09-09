@@ -63,7 +63,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## CHBaseUtil
 
-Copyright (c) 2018 1211054926@qq.com <lichanghong>
+Copyright (c) 2018 1211054926@qq.com <lichanghong@xxx.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

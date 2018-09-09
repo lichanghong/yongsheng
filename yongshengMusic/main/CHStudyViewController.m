@@ -8,11 +8,11 @@
 
 #import "CHStudyViewController.h"
 #import "UITableView+CHExtension.h"
-#import "CHNewsTableViewCell.h"
 #import "CHHomeRouterModule.h"
 #import "CHNetRequest.h"
 #import "HomeCourceModel.h"
 #import <YYModel.h>
+#import <CHBaseUtil.h>
 #import <UIImageView+WebCache.h>
 
 #define WEAKSELF __weak typeof(self) weakSelf = self;
@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableViewCellNames = @[
-                                @"CHNewsTableViewCell"
+                                @"UITableViewCell"
                                 ];
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.tableView setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentAutomatic];
@@ -75,7 +75,7 @@
     CGFloat height = 0;
     switch (indexPath.section) {
         case CHStudyViewControllerCellTypeSectionType:
-            height =  self.courceModel.cource.count>0?90:0;
+            height =  self.courceModel.cource.count>0?44:0;
             break;
       
         default:
@@ -97,11 +97,9 @@
         case CHStudyViewControllerCellTypeSectionType:
         {
             HomeCourceItem *item = [self.courceModel.cource objectAtIndex:indexPath.row];
-            CHNewsTableViewCell *workCell = (CHNewsTableViewCell *)cell;
-            workCell.title.text = item.title;
-            workCell.subTitle.text = item.subtitle;
-            [workCell.mImageView sd_setImageWithURL:[NSURL URLWithString:item.img]];
-            
+            UITableViewCell *workCell = (UITableViewCell *)cell;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            workCell.textLabel.text = item.title;
             break;
         }
        
@@ -110,6 +108,10 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self ch_openURL:CHRouterHomeURLPattern];
+}
  
 
 - (void)didReceiveMemoryWarning {
